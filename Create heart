@@ -1,0 +1,73 @@
+import turtle
+t = turtle.Turtle()
+turtle.title("Design")
+
+def circle(): # to form full circle range(375)
+    small = 100
+    for i in range(200):
+        t.color("blue")
+        t.speed(0)
+        t.fd(1)
+        t.rt(1)
+        t.lt(45)
+        small -= 0.5
+        square(small)
+        t.lt(-45)
+
+def circlem(): # to form full circle range(375)
+    big = 0.5
+    for i in range(200):
+        t.color("cyan")
+        t.speed(0)
+        t.fd(1)
+        t.rt(1)
+        t.lt(45)
+        big += 0.5
+        square(big)
+        t.lt(-45)
+
+
+def square(l):
+    t.speed(10)
+    for i in range(4):
+        t.fd(l)
+        t.rt(-90)
+
+
+def txt():
+    t.up()
+    t.setpos(.68, 95)
+    t.down()
+    t.color('lightgreen')
+    t.write("Listen to your HEART",
+            font=("Verdana", 12, "bold"))
+
+def main():
+    t.lt(140)
+    big = 2
+    for i in range(50):
+        t.color("red")
+        t.fd(3)
+        t.lt(45)
+        big += 2
+        square(big)
+        t.lt(-45)
+
+    circle()
+    t.lt(120)
+    circlem()
+
+    small = 100
+    for i in range(50):
+        t.color("magenta")
+        t.fd(3)
+        t.lt(45)
+        small -= 2
+        square(small)
+        t.lt(-45)
+    t.rt(1)
+    t.lt(140)
+
+main()
+txt()
+turtle.mainloop()
