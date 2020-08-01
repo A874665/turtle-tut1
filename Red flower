@@ -1,0 +1,31 @@
+import turtle
+
+t = turtle.Turtle()
+turtle.title("Design")
+t.color("red")
+def petal():
+    t.fillcolor('red')
+    t.begin_fill()
+    s = 0
+    p = 0
+    for i in range(5):
+        for i in range(75):
+            t.fd(2)
+            t.rt(-1.5)
+        t.penup()
+        t.home()
+        t.pendown()
+        s += 72
+        t.rt(s)
+        for i in range(75):
+            t.fd(2)
+            t.rt(1.5)
+        t.penup()
+        t.home()
+        t.pendown()
+        p += 72
+        t.lt(p)
+    t.end_fill()
+
+petal()
+turtle.mainloop()
