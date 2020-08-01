@@ -1,0 +1,39 @@
+import turtle
+
+t = turtle.Turtle()
+turtle.title("Design")
+
+def square():
+    for i in range(4):
+        t.speed(10)
+        t.fd(100)
+        t.rt(90)
+
+def new_des():
+    s = 0
+    p = 0
+    for i in range(5):
+        for i in range(75):
+            t.pencolor("blue")
+            t.fd(2)
+            t.rt(-1.5)
+            square()
+        t.penup()
+        t.home()
+        t.pendown()
+        s += 72
+        t.rt(s)
+        for i in range(75):
+            t.pencolor("red")
+            t.fd(2)
+            t.rt(1.5)
+            square()
+        t.penup()
+        t.home()
+        t.pendown()
+        p += 72
+        t.lt(p)
+
+new_des()
+
+turtle.mainloop()
