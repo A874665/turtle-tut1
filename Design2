@@ -1,0 +1,28 @@
+import turtle
+
+t = turtle.Turtle()
+turtle.title("Design")
+turtle.bgcolor("black")
+color=["blue", "red", "yellow", "green", "magenta", "lightgreen"]
+a = 0
+for i in range(5):
+    t.pencolor(color[i])
+    t.penup()
+    t.home()
+    t.pendown()
+    a += 72
+    t.lt(a)
+    l = 2
+    for i in range(40):
+        l += 2
+        t.fd(5)
+        t.lt(2)
+        t.lt(3)
+        for i in range(5):
+            t.speed(10)
+            t.fd(l)
+            t.lt(144)
+
+
+
+turtle.mainloop()
