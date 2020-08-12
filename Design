@@ -1,0 +1,23 @@
+import turtle
+
+t = turtle.Turtle()
+turtle.title("Design")
+turtle.bgcolor("black")
+t.color("blue")
+for i in range(6):
+    t.speed(10)
+    t.rt(30)
+    for i in range(60):
+        t.fd(2)
+        t.lt(-3)
+
+        for i in range(3):
+            t.fd(100)
+            t.lt(120)
+    for i in range(60):
+        t.fd(1)
+        t.lt(2)
+        for i in range(3):
+            t.fd(100)
+            t.lt(120)
+turtle.mainloop()
